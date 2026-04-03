@@ -1,32 +1,32 @@
 "use client";
 
 import {
-  Users,
   ShoppingCart,
+  ClipboardList,
   Truck,
   Settings,
+  Factory,
   Package,
-  ShieldCheck,
-  FileText,
+  MapPin,
+  Receipt,
   CreditCard,
-  Footprints,
   LayoutDashboard,
-  Database,
+  ShieldCheck,
 } from "lucide-react";
 import { FadeIn, StaggerContainer, StaggerItem } from "./AnimationWrapper";
 
 const modules = [
-  { icon: Users, label: "CRM" },
-  { icon: ShoppingCart, label: "Sales Orders" },
-  { icon: Truck, label: "Procurement" },
-  { icon: Settings, label: "BOM & Production" },
-  { icon: Package, label: "WIP Inventory" },
-  { icon: ShieldCheck, label: "Quality Control" },
-  { icon: FileText, label: "Subcontract Accounts" },
-  { icon: CreditCard, label: "Unified Notes (Debit/Credit)" },
-  { icon: Footprints, label: "Activity Trail" },
-  { icon: LayoutDashboard, label: "Dashboards" },
-  { icon: Database, label: "Master Data" },
+  { icon: ShoppingCart, label: "Sales Orders & Availability" },
+  { icon: ClipboardList, label: "Procurement Planning" },
+  { icon: Truck, label: "Purchase Orders & Inward" },
+  { icon: Settings, label: "BOM & Production Routing" },
+  { icon: Factory, label: "Production Logs & Consumption" },
+  { icon: Package, label: "Inventory Ledger & Transfers" },
+  { icon: MapPin, label: "Fulfillment & Delivery Trace" },
+  { icon: Receipt, label: "Invoicing & Payments" },
+  { icon: CreditCard, label: "Debit/Credit Notes" },
+  { icon: LayoutDashboard, label: "Dashboards & Reports" },
+  { icon: ShieldCheck, label: "Roles, Permissions & Audit Trail" },
 ];
 
 export default function Modules() {
@@ -39,8 +39,11 @@ export default function Modules() {
         <FadeIn>
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground tracking-tight font-[family-name:var(--font-space-grotesk)]">
-              11 Modules. Infinite Possibilities.
+              Capabilities across the operational backbone
             </h2>
+            <p className="mt-4 text-lg text-muted max-w-3xl mx-auto">
+              Plan2Yield brings together the controls manufacturers usually split across spreadsheets, registers, WhatsApp updates, and disconnected systems.
+            </p>
           </div>
         </FadeIn>
 
@@ -53,16 +56,18 @@ export default function Modules() {
             return (
               <StaggerItem key={mod.label}>
                 <div className="bg-white rounded-xl p-5 border border-slate-100 shadow-sm card-hover group cursor-default">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-purple-50 border border-purple-100 flex items-center justify-center shrink-0 group-hover:bg-[#5a32fa] group-hover:border-[#5a32fa] transition-colors duration-300">
+                  <div className="flex items-start gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-purple-50 border border-purple-100 flex items-center justify-center shrink-0 group-hover:bg-[#5a32fa] group-hover:border-[#5a32fa] transition-colors duration-300 mt-0.5">
                       <Icon
                         size={20}
                         className="text-[#5a32fa] group-hover:text-white transition-colors duration-300"
                       />
                     </div>
-                    <span className="text-sm font-semibold text-foreground group-hover:text-[#5a32fa] transition-colors duration-300">
-                      {mod.label}
-                    </span>
+                    <div>
+                      <span className="text-sm font-semibold text-foreground group-hover:text-[#5a32fa] transition-colors duration-300 block">
+                        {mod.label}
+                      </span>
+                    </div>
                   </div>
                 </div>
               </StaggerItem>

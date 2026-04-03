@@ -36,10 +36,10 @@ export default function CTA() {
         <FadeIn>
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground tracking-tight font-[family-name:var(--font-space-grotesk)]">
-              Ready to move from plan to production?
+              Ready to run your factory with more control and fewer surprises?
             </h2>
-            <p className="mt-4 text-lg text-muted max-w-xl mx-auto">
-              Join 200+ factories using Plan2Yield to automate their growth.
+            <p className="mt-4 text-lg text-muted max-w-2xl mx-auto">
+              See how Plan2Yield helps manufacturing teams check order feasibility, control stock and production, track recoveries, and review operations through live dashboards.
             </p>
           </div>
         </FadeIn>
@@ -135,12 +135,12 @@ export default function CTA() {
                 id="cta-submit-btn"
                 className="mt-8 w-full py-4 bg-[#5a32fa] text-white font-bold rounded-xl shadow-xl shadow-purple-600/25 hover:bg-purple-700 hover:shadow-purple-600/40 hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2 text-base cursor-pointer"
               >
-                Book My Free Demo
+                Book My Demo
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </button>
 
               <p className="mt-4 text-center text-xs text-muted-light">
-                No commitment required. We&apos;ll reach out within 24 hours.
+                Tell us your workflow, and we&apos;ll show you a relevant walkthrough of orders, procurement, production, inventory, dispatch, and finance.
               </p>
             </motion.form>
           </div>

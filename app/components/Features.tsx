@@ -1,19 +1,19 @@
 "use client";
 
 import {
-  Warehouse,
-  Activity,
-  BarChart3,
-  IndianRupee,
+  ClipboardCheck,
+  ShoppingBag,
+  Cog,
+  TrendingDown,
 } from "lucide-react";
 import { FadeIn, StaggerContainer, StaggerItem } from "./AnimationWrapper";
 
 const features = [
   {
-    icon: Warehouse,
-    title: "Intelligent Inventory",
+    icon: ClipboardCheck,
+    title: "Intelligent Order-to-Availability Engine",
     description:
-      "Predictive stock alerts, multi-warehouse tracking, and automated reorder triggers that keep your capital flowing.",
+      "Check whether an order can actually be fulfilled using live finished stock, reservations, BOM needs, and raw material availability.",
     large: true,
     hasImage: true,
     accentColor: "from-purple-50 to-slate-50",
@@ -21,20 +21,20 @@ const features = [
     iconColor: "text-[#5a32fa]",
   },
   {
-    icon: Activity,
-    title: "Real-Time Production",
+    icon: ShoppingBag,
+    title: "Procurement Planning from Real Shortages",
     description:
-      "Live status tracking, OEE monitoring, and quality control at every stage.",
+      "Convert shortages into vendor-wise purchase planning using preferred vendors, past purchase rates, and draft PO workflows.",
     large: false,
-    accentColor: "from-green-50 to-slate-50",
-    iconBg: "bg-green-100",
-    iconColor: "text-green-600",
+    accentColor: "from-blue-50 to-slate-50",
+    iconBg: "bg-blue-100",
+    iconColor: "text-blue-600",
   },
   {
-    icon: BarChart3,
-    title: "Decision-Ready Analytics",
+    icon: Cog,
+    title: "Production Guardrails with Traceability",
     description:
-      "Enjoy visually beautiful reports on yield, wastage, and cost variance directly to your CXO.",
+      "Control routing, machine usage, crew assignment, raw consumption, finished output, and batch-wise traceability.",
     large: false,
     purple: true,
     accentColor: "from-[#5a32fa] to-purple-700",
@@ -42,10 +42,10 @@ const features = [
     iconColor: "text-white",
   },
   {
-    icon: IndianRupee,
-    title: "Cashflow & Finance",
+    icon: TrendingDown,
+    title: "Financial & Operational Recovery Visibility",
     description:
-      "Integrated ledgers, automated GST compliance, and receivable alerts to keep your books healthy.",
+      "Track debit notes, credit notes, settlement status, open recoveries, vendor/customer warning signals, and note ageing in one system.",
     large: false,
     accentColor: "from-amber-50 to-slate-50",
     iconBg: "bg-amber-100",
@@ -60,9 +60,13 @@ export default function Features() {
         <FadeIn>
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground tracking-tight font-[family-name:var(--font-space-grotesk)]">
-              Built for the way Indian factories <br className="hidden sm:block" />
-              actually work.
+              Built for factories that need control,{" "}
+              <br className="hidden sm:block" />
+              not just records
             </h2>
+            <p className="mt-4 text-lg text-muted max-w-3xl mx-auto">
+              Plan2Yield is designed for manufacturing teams that need live operational visibility across planning, stock, production, dispatch, and financial follow-through.
+            </p>
           </div>
         </FadeIn>
 
@@ -119,7 +123,7 @@ export default function Features() {
                         <div className="w-10 h-16 bg-purple-200/50 rounded-t-lg" />
                       </div>
                       <div className="absolute bottom-3 right-4 glass rounded-lg px-3 py-2 text-xs font-semibold text-[#5a32fa]">
-                        3 Warehouses Active
+                        Order Feasibility: Checked
                       </div>
                     </div>
                   )}

@@ -8,45 +8,45 @@ const plans = [
     name: "Starter",
     price: "₹9,999",
     period: "/mo",
-    description: "Perfect for small factories getting started",
+    description: "For smaller factories moving from spreadsheet-led operations to connected workflows",
     features: [
       "Up to 5 users",
-      "Basic Modules",
-      "Email Support",
-      "Core Dashboards",
-      "Single Warehouse",
+      "Core order, purchase, inventory, and invoice workflows",
+      "Standard dashboards",
+      "Single plant or warehouse setup",
+      "Email support",
     ],
-    cta: "Get Started",
+    cta: "Book a Demo",
     popular: false,
   },
   {
     name: "Growth",
     price: "₹24,999",
     period: "/mo",
-    description: "For growing manufacturers who need more",
+    description: "For growing manufacturers that need tighter control across orders, procurement, stock, production, and finance",
     features: [
       "Up to 25 users",
-      "Advanced Production",
-      "Multi-warehouse",
-      "Note Settlements",
-      "Priority Support",
-      "API Access (Basic)",
+      "Advanced production and fulfillment workflows",
+      "Multi-warehouse visibility",
+      "Debit/credit note workflows",
+      "Priority support",
+      "Basic integrations",
     ],
-    cta: "Start 14-Day Trial",
+    cta: "Book a Demo",
     popular: true,
   },
   {
     name: "Enterprise",
     price: "Custom",
     period: "",
-    description: "Tailored for large-scale operations",
+    description: "For larger operations that need deeper controls, governance, integrations, and custom process support",
     features: [
       "Unlimited users",
-      "API Access",
-      "Custom Integrations",
-      "Dedicated Account Manager",
-      "On-premise Option",
-      "SLA Guarantee",
+      "Advanced reporting and governance",
+      "Full API/integration support",
+      "Custom workflows",
+      "Dedicated onboarding and support",
+      "On-premise or controlled deployment options",
     ],
     cta: "Contact Sales",
     popular: false,
@@ -63,10 +63,10 @@ export default function Pricing() {
         <FadeIn>
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground tracking-tight font-[family-name:var(--font-space-grotesk)]">
-              Investment for Growth
+              Pricing based on the control your operations need
             </h2>
-            <p className="mt-4 text-lg text-muted max-w-xl mx-auto">
-              Transparent pricing built for every scale of manufacturing.
+            <p className="mt-4 text-lg text-muted max-w-2xl mx-auto">
+              Start with the workflows that matter now, and expand as your factory adds complexity, teams, and reporting needs.
             </p>
           </div>
         </FadeIn>

@@ -10,11 +10,11 @@ import {
 import { FadeIn, StaggerContainer, StaggerItem } from "./AnimationWrapper";
 
 const steps = [
-  { number: 1, label: "DEMAND", icon: ShoppingCart, description: "Orders & Forecasts" },
-  { number: 2, label: "PROCUREMENT", icon: Truck, description: "Purchase & Inward" },
-  { number: 3, label: "EXECUTION", icon: Cog, description: "Production & QC", active: true },
-  { number: 4, label: "FULFILLMENT", icon: Package, description: "Dispatch & Delivery" },
-  { number: 5, label: "SETTLEMENT", icon: Receipt, description: "Invoice & Payment" },
+  { number: 1, label: "ORDER CHECK", icon: ShoppingCart, description: "Finished stock, reservations, BOM requirement, raw availability" },
+  { number: 2, label: "PROCUREMENT PLAN", icon: Truck, description: "Shortage detection, preferred vendor mapping, draft PO generation" },
+  { number: 3, label: "PRODUCTION CONTROL", icon: Cog, description: "Routing, machine lock, crew validation, raw sufficiency, FIFO consumption", active: true },
+  { number: 4, label: "FULFILLMENT TRACE", icon: Package, description: "Allocation, dispatch, delivery status, invoice linkage, audit trail" },
+  { number: 5, label: "FINANCIAL RECOVERY", icon: Receipt, description: "Debit/credit notes, settlement lifecycle, ageing, open recoveries, warning signals" },
 ];
 
 export default function Flow() {
@@ -27,11 +27,10 @@ export default function Flow() {
         <FadeIn>
           <div className="text-center mb-20">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground tracking-tight font-[family-name:var(--font-space-grotesk)]">
-              One System. Full Visibility.
+              One connected workflow from order booking to settlement
             </h2>
-            <p className="mt-4 text-lg text-muted max-w-2xl mx-auto">
-              Connecting every node of your value chain in one singular, flowing
-              intelligent network.
+            <p className="mt-4 text-lg text-muted max-w-3xl mx-auto">
+              Every stage stays linked, so your team can see whether an order is feasible, what must be procured, what can go to production, what has been fulfilled, and what remains financially unresolved.
             </p>
           </div>
         </FadeIn>

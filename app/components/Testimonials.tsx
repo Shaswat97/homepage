@@ -6,26 +6,26 @@ import { FadeIn, StaggerContainer, StaggerItem } from "./AnimationWrapper";
 const testimonials = [
   {
     quote:
-      "We ditched 5 massive spreadsheets. Production planning takes minutes now. A game changer.",
-    name: "Rajesh K.",
-    company: "Auto Parts",
-    avatar: "RK",
+      "We no longer confirm orders blindly. The team can see what is available, what needs production, and what needs procurement before committing.",
+    name: "Rajiv M.",
+    company: "Plastic Components",
+    avatar: "RM",
     avatarBg: "bg-purple-100 text-[#5a32fa]",
   },
   {
     quote:
-      "The Debit Note workflow alone saved us enough to cover the software cost for the whole year.",
-    name: "Amit S.",
-    company: "Plastics",
-    avatar: "AS",
+      "Earlier, shortage claims and debit recoveries got lost in calls and spreadsheets. Now they stay visible until settled.",
+    name: "Ankit P.",
+    company: "Industrial Supplies",
+    avatar: "AP",
     avatarBg: "bg-green-100 text-green-600",
   },
   {
     quote:
-      "Finally software that our shop floor staff actually wants to use instead of fighting against.",
-    name: "Neha G.",
-    company: "Textiles",
-    avatar: "NG",
+      "The biggest value is control. Production, inventory, dispatch, and finance are now connected enough for management to trust the numbers.",
+    name: "Neha A.",
+    company: "Packaging Manufacturing",
+    avatar: "NA",
     avatarBg: "bg-amber-100 text-amber-600",
   },
 ];

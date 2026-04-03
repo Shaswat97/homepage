@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { FadeIn } from "./AnimationWrapper";
 import { motion } from "framer-motion";
 
@@ -18,10 +18,10 @@ function DashboardMockup() {
         <div className="flex items-center justify-between mb-6">
           <div>
             <p className="text-xs font-medium text-muted-light uppercase tracking-wider">
-              Dashboard Overview
+              Operations Control
             </p>
             <h3 className="text-lg font-bold text-foreground mt-0.5 font-[family-name:var(--font-space-grotesk)]">
-              Financial Summary
+              Monthly Overview
             </h3>
           </div>
           <div className="flex items-center gap-1.5">
@@ -33,19 +33,19 @@ function DashboardMockup() {
         {/* Metrics Grid */}
         <div className="grid grid-cols-2 gap-3 mb-5">
           <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
-            <p className="text-xs font-medium text-muted-light mb-1">Gross Revenue</p>
-            <p className="text-xl font-bold text-foreground font-[family-name:var(--font-space-grotesk)]">₹24.8L</p>
+            <p className="text-xs font-medium text-muted-light mb-1">Outstanding Receivables</p>
+            <p className="text-xl font-bold text-foreground font-[family-name:var(--font-space-grotesk)]">₹18.4L</p>
             <div className="flex items-center gap-1 mt-1.5">
-              <span className="text-xs font-semibold text-green-600">+12.4%</span>
-              <span className="text-xs text-muted-light">vs last month</span>
+              <span className="text-xs font-semibold text-orange-500">3 overdue</span>
+              <span className="text-xs text-muted-light">invoices</span>
             </div>
           </div>
           <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
-            <p className="text-xs font-medium text-muted-light mb-1">Payables</p>
+            <p className="text-xs font-medium text-muted-light mb-1">Vendor Payables</p>
             <p className="text-xl font-bold text-foreground font-[family-name:var(--font-space-grotesk)]">₹9.2L</p>
             <div className="flex items-center gap-1 mt-1.5">
-              <span className="text-xs font-semibold text-orange-500">-3.1%</span>
-              <span className="text-xs text-muted-light">vs last month</span>
+              <span className="text-xs font-semibold text-green-600">₹2.1L</span>
+              <span className="text-xs text-muted-light">settled this week</span>
             </div>
           </div>
         </div>
@@ -53,7 +53,7 @@ function DashboardMockup() {
         {/* Mini Chart Placeholder */}
         <div className="bg-gradient-to-r from-purple-50 to-slate-50 rounded-xl p-4 border border-purple-100/50">
           <div className="flex items-center justify-between mb-3">
-            <p className="text-xs font-medium text-muted">Monthly Production Trend</p>
+            <p className="text-xs font-medium text-muted">Dispatch vs Orders (Monthly)</p>
             <span className="text-xs font-semibold text-[#5a32fa]">FY 2025-26</span>
           </div>
           {/* SVG Chart */}
@@ -103,7 +103,7 @@ function DashboardMockup() {
               </svg>
             </div>
             <div>
-              <p className="text-xs text-muted-light font-medium">Yield</p>
+              <p className="text-xs text-muted-light font-medium">Material Yield</p>
               <p className="text-sm font-bold text-green-600 font-[family-name:var(--font-space-grotesk)]">94.2%</p>
             </div>
           </div>
@@ -134,7 +134,7 @@ function DashboardMockup() {
               </svg>
             </div>
             <div>
-              <p className="text-xs text-muted-light font-medium">GRN Received</p>
+              <p className="text-xs text-muted-light font-medium">GRN Verified</p>
               <p className="text-sm font-bold text-foreground font-[family-name:var(--font-space-grotesk)]">PO-1247</p>
             </div>
           </div>
@@ -167,83 +167,68 @@ export default function Hero() {
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-50 border border-purple-100 rounded-full mb-8">
                 <span className="w-2 h-2 rounded-full bg-[#5a32fa] animate-pulse" />
                 <span className="text-xs font-semibold text-[#5a32fa] tracking-wide uppercase">
-                  Manufacturing Operations System
+                  Manufacturing Operations Control System
                 </span>
               </div>
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-foreground leading-[1.1] tracking-tight font-[family-name:var(--font-space-grotesk)]">
-                Stop running your factory on{" "}
-                <span className="italic text-[#5a32fa] relative">
-                  spreadsheets.
-                  <svg
-                    className="absolute -bottom-2 left-0 w-full"
-                    viewBox="0 0 300 12"
-                    fill="none"
-                  >
-                    <path
-                      d="M2 8 Q75 2, 150 6 T298 4"
-                      stroke="#5a32fa"
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                      opacity="0.3"
-                    />
-                  </svg>
-                </span>
+              <h1 className="text-4xl sm:text-5xl lg:text-[2.85rem] xl:text-5xl font-extrabold text-foreground leading-[1.15] tracking-tight font-[family-name:var(--font-space-grotesk)]">
+                Know what you can{" "}
+                <span className="text-[#5a32fa]">sell, produce, procure, dispatch,</span>{" "}
+                and <span className="text-[#5a32fa]">recover</span> — before mistakes cost you.
               </h1>
             </FadeIn>
 
             <FadeIn delay={0.35}>
-              <p className="mt-6 text-lg text-muted leading-relaxed max-w-md">
-                Plan2Yield seamlessly connects your operations. From procurement
-                to warehouse, production lines and invoices. Real-time
-                visibility, zero friction.
+              <p className="mt-6 text-lg text-muted leading-relaxed max-w-lg">
+                Plan2Yield connects sales orders, stock, BOM, procurement, production, dispatch,
+                invoicing, and recoveries into one decision-ready workflow for manufacturers.
               </p>
             </FadeIn>
 
-            <FadeIn delay={0.5}>
+            {/* Supporting bullets */}
+            <FadeIn delay={0.45}>
+              <ul className="mt-6 space-y-2.5">
+                {[
+                  "Check order feasibility instantly",
+                  "Prevent stock, machine, and production conflicts",
+                  "Track margins, recoveries, and operational leakage live",
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-2.5 text-sm text-slate-700">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5a32fa" strokeWidth="2.5" strokeLinecap="round" className="shrink-0">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                      <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </FadeIn>
+
+            <FadeIn delay={0.55}>
               <div className="mt-10 flex flex-wrap items-center gap-4">
                 <a
                   href="#demo"
                   id="hero-get-started"
                   className="group inline-flex items-center gap-2 px-7 py-3.5 bg-[#5a32fa] text-white font-semibold rounded-xl hover:bg-purple-700 transition-all duration-300 shadow-xl shadow-purple-600/25 hover:shadow-purple-600/40 hover:-translate-y-0.5"
                 >
-                  Get Started
+                  Book a Demo
                   <ArrowRight
                     size={18}
                     className="group-hover:translate-x-1 transition-transform"
                   />
                 </a>
                 <a
-                  href="#tour"
-                  id="hero-watch-tour"
+                  href="#solutions"
+                  id="hero-how-it-works"
                   className="group inline-flex items-center gap-2 px-6 py-3.5 text-slate-700 font-semibold hover:text-[#5a32fa] transition-colors duration-200"
                 >
                   <div className="w-10 h-10 rounded-full bg-purple-50 border border-purple-100 flex items-center justify-center group-hover:bg-purple-100 transition-colors">
-                    <Play size={16} className="text-[#5a32fa] ml-0.5" fill="#5a32fa" />
+                    <ArrowRight size={16} className="text-[#5a32fa]" />
                   </div>
-                  Watch 2-minute Tour
+                  See How It Works
                 </a>
-              </div>
-            </FadeIn>
-
-            <FadeIn delay={0.65}>
-              <div className="mt-12 flex items-center gap-6 text-sm text-muted-light">
-                <div className="flex items-center gap-2">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" strokeWidth="2.5" strokeLinecap="round">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                    <polyline points="22 4 12 14.01 9 11.01" />
-                  </svg>
-                  <span>No credit card required</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" strokeWidth="2.5" strokeLinecap="round">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                    <polyline points="22 4 12 14.01 9 11.01" />
-                  </svg>
-                  <span>14-day free trial</span>
-                </div>
               </div>
             </FadeIn>
           </div>
@@ -251,6 +236,9 @@ export default function Hero() {
           {/* Right - Dashboard Mockup */}
           <FadeIn delay={0.3} direction="left" className="hidden lg:block">
             <DashboardMockup />
+            <p className="mt-4 text-center text-xs text-muted-light italic">
+              From order creation to production readiness in one live workflow
+            </p>
           </FadeIn>
         </div>
       </div>

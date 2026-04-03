@@ -11,36 +11,36 @@ import { FadeIn, StaggerContainer, StaggerItem } from "./AnimationWrapper";
 const challenges = [
   {
     icon: Calendar,
-    title: "Sales Friction",
+    title: "Orders get committed without checking production reality",
     description:
-      "Missing delivery dates without knowing actual stock or production schedules.",
+      "Sales teams promise quantities and dates without a live view of finished stock, raw shortages, BOM requirements, or existing reservations.",
     color: "text-red-500",
     bgColor: "bg-red-50",
     borderColor: "border-red-100",
   },
   {
     icon: AlertTriangle,
-    title: "Procurement Gaps",
+    title: "Procurement reacts too late",
     description:
-      "Surprise stockouts because Excel or ledgers lag actual material usage.",
+      "Teams discover shortages only after planning or production has already moved, leading to delays, rush buying, and avoidable cost.",
     color: "text-orange-500",
     bgColor: "bg-orange-50",
     borderColor: "border-orange-100",
   },
   {
     icon: Gauge,
-    title: "Production Blindness",
+    title: "Production runs with hidden conflicts",
     description:
-      "Wasteful machine downtime because nobody knows who is running which work orders.",
+      "Machine overlap, missing routing, insufficient raw material, invalid crew, and overproduction risk are often caught too late.",
     color: "text-red-400",
     bgColor: "bg-red-50",
     borderColor: "border-red-100",
   },
   {
     icon: FileWarning,
-    title: "Finance Lag",
+    title: "Financial leakage stays invisible",
     description:
-      "Invoices, debit notes, and cashflow reports that are always 15 days late.",
+      "Debit notes, shortage claims, returns, open recoveries, and delayed settlements quietly reduce margins unless tracked operationally.",
     color: "text-orange-400",
     bgColor: "bg-orange-50",
     borderColor: "border-orange-100",
@@ -54,11 +54,14 @@ export default function Challenges() {
         <FadeIn>
           <div className="text-center mb-16">
             <span className="inline-block px-4 py-1.5 bg-red-50 border border-red-100 rounded-full text-xs font-bold text-red-500 uppercase tracking-widest mb-4">
-              THE CHALLENGES
+              THE PROBLEM
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground tracking-tight font-[family-name:var(--font-space-grotesk)]">
-              The Reality Today
+              Why spreadsheets fail once factory operations get real
             </h2>
+            <p className="mt-4 text-lg text-muted max-w-2xl mx-auto">
+              Spreadsheets can record activity. They cannot protect decisions across stock, production, machines, dispatch, and commercial follow-through.
+            </p>
           </div>
         </FadeIn>
 

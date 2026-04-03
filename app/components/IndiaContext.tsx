@@ -11,31 +11,33 @@ import { FadeIn, StaggerContainer, StaggerItem } from "./AnimationWrapper";
 const howItWorks = [
   {
     icon: Settings2,
-    step: "Setup",
-    description: "Define machines, materials, users.",
+    step: "Configure",
+    description: "Set up plants, warehouses, machines, materials, BOMs, SKUs, employees, permissions, and process rules.",
   },
   {
     icon: ArrowDownToLine,
-    step: "Inward",
-    description: "Record receipts, bills, payments.",
+    step: "Operate",
+    description: "Run orders, procurement, inward, production, transfers, dispatch, invoicing, and collections in one connected flow.",
   },
   {
     icon: Cog,
-    step: "Operate",
-    description: "Produce, dispatch, invoice.",
+    step: "Control",
+    description: "Protect decisions with availability checks, reservations, machine locks, stock guardrails, and approval workflows.",
   },
   {
     icon: BarChart3,
-    step: "Control",
-    description: "View reports, track margins.",
+    step: "Review",
+    description: "Track dashboards, recoveries, ageing, margin leakage, low-stock risk, output, and financial outcomes in real time.",
   },
 ];
 
 const badges = [
-  "INR-FIRST FINANCE",
-  "USER ROLE GOVERNANCE",
-  "MADE IN BHARAT",
-  "ROLE-BASED ACCESS",
+  "GST-READY DOCUMENTS",
+  "DEBIT/CREDIT NOTE LIFECYCLE",
+  "INWARD TO DISPATCH VISIBILITY",
+  "INR-FIRST OPERATIONS",
+  "ROLE-BASED CONTROLS",
+  "AUDIT-READY RECORDS",
 ];
 
 export default function IndiaContext() {
@@ -51,11 +53,10 @@ export default function IndiaContext() {
           <div>
             <FadeIn>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight font-[family-name:var(--font-space-grotesk)]">
-                Designed for Indian Sovereignty
+                Built for Indian manufacturing operations
               </h2>
               <p className="mt-5 text-lg text-white/70 leading-relaxed max-w-lg">
-                We understand the local nuances of manufacturing in India—from
-                complex GST structures to diverse labor management.
+                Plan2Yield supports the realities Indian factories deal with every day — GST-ready documentation, debit/credit note workflows, inward and dispatch control, INR-based operations, role-based access, and multi-step production environments.
               </p>
             </FadeIn>
 
