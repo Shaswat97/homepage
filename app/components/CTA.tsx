@@ -139,9 +139,21 @@ export default function CTA() {
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </button>
 
-              <p className="mt-4 text-center text-xs text-muted-light">
-                Tell us your workflow, and we&apos;ll show you a relevant walkthrough of orders, procurement, production, inventory, dispatch, and finance.
-              </p>
+              <div className="mt-5 pt-5 border-t border-slate-100 flex flex-col items-center">
+                <p className="text-xs text-slate-500 mb-3 text-center">
+                  Not ready for a call? Start with a sample order-to-resolution flow.
+                </p>
+                <button
+                  type="button"
+                  className="w-full py-3 bg-slate-50 text-foreground font-semibold rounded-xl border border-slate-200 hover:bg-slate-100 hover:border-slate-300 transition-colors flex items-center justify-center cursor-pointer"
+                  onClick={() => {
+                    const el = document.getElementById("story-flow");
+                    if (el) el.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
+                  View Example Workflow
+                </button>
+              </div>
             </motion.form>
           </div>
         </FadeIn>

@@ -9,6 +9,7 @@ const plans = [
     price: "₹9,999",
     period: "/mo",
     description: "For smaller factories moving from spreadsheet-led operations to connected workflows",
+    bestFor: "Factories moving from spreadsheets to a controlled operating system",
     features: [
       "Up to 5 users",
       "Core order, purchase, inventory, and invoice workflows",
@@ -24,6 +25,7 @@ const plans = [
     price: "₹24,999",
     period: "/mo",
     description: "For growing manufacturers that need tighter control across orders, procurement, stock, production, and finance",
+    bestFor: "Teams that need tighter coordination across order, stock, production, dispatch, and finance",
     features: [
       "Up to 25 users",
       "Advanced production and fulfillment workflows",
@@ -40,6 +42,7 @@ const plans = [
     price: "Custom",
     period: "",
     description: "For larger operations that need deeper controls, governance, integrations, and custom process support",
+    bestFor: "Larger or more complex operations needing governance, integrations, and rollout flexibility",
     features: [
       "Unlimited users",
       "Advanced reporting and governance",
@@ -97,9 +100,14 @@ export default function Pricing() {
                 <h3 className="text-lg font-bold text-foreground font-[family-name:var(--font-space-grotesk)]">
                   {plan.name}
                 </h3>
-                <p className="text-sm text-muted-light mt-1">
+                <p className="text-sm text-muted-light mt-1 mb-4">
                   {plan.description}
                 </p>
+
+                <div className="mt-3 pt-3 border-t border-slate-100">
+                  <span className="text-[10px] font-bold text-[#5a32fa] uppercase tracking-wider block mb-0.5">Best for:</span>
+                  <span className="text-[13px] font-semibold text-slate-700 leading-snug block">{plan.bestFor}</span>
+                </div>
 
                 {/* Price */}
                 <div className="mt-6 mb-6">

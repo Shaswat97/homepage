@@ -17,7 +17,7 @@ const proofCards = [
     icon: ClipboardCheck,
     title: "Order Feasibility",
     description:
-      "Checks finished stock, reservations, BOM requirements, and raw shortages before confirming an order.",
+      "Checks finished stock, reservations, BOM requirements, and raw shortages before confirming an order, so the team knows whether to confirm, produce, or procure next.",
     iconBg: "bg-purple-100",
     iconColor: "text-[#5a32fa]",
   },
@@ -25,7 +25,7 @@ const proofCards = [
     icon: ShoppingBag,
     title: "Procurement Readiness",
     description:
-      "Turns shortages into vendor-wise purchase planning with quantity and cost visibility.",
+      "Turns shortages into vendor-wise purchase planning with quantity and cost visibility, so shortages turn into an actionable buying plan instead of a delay.",
     iconBg: "bg-blue-100",
     iconColor: "text-blue-600",
   },
@@ -33,7 +33,7 @@ const proofCards = [
     icon: ShieldAlert,
     title: "Production Safety",
     description:
-      "Prevents production starts when routing, machine, crew, or material conditions are not valid.",
+      "Prevents production starts when routing, machine, crew, or material conditions are not valid, so invalid jobs are blocked before they disrupt the floor.",
     iconBg: "bg-green-100",
     iconColor: "text-green-600",
   },
@@ -41,7 +41,7 @@ const proofCards = [
     icon: TrendingDown,
     title: "Recovery & Risk Signals",
     description:
-      "Surfaces vendor issues, customer return patterns, open debit recoveries, and ageing notes.",
+      "Surfaces vendor issues, customer return patterns, open debit recoveries, and ageing notes, so commercial leakage is chased to closure, not forgotten.",
     iconBg: "bg-amber-100",
     iconColor: "text-amber-600",
   },

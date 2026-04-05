@@ -12,7 +12,7 @@ const cards = [
     icon: BookOpen,
     title: "Ledger-Driven Inventory",
     description:
-      "Every receipt, issue, production output, transfer, adjustment, and scrap movement is recorded zone-wise with valuation.",
+      "Every receipt, issue, transfer, production output, adjustment, and scrap movement is recorded zone-wise with value and traceability.",
     iconBg: "bg-purple-100",
     iconColor: "text-[#5a32fa]",
     border: "border-purple-100",
@@ -21,7 +21,7 @@ const cards = [
     icon: ShieldCheck,
     title: "Role-Based Access Control",
     description:
-      "Granular permissions control who can confirm orders, receive purchases, start production, adjust inventory, or manage settings.",
+      "Permissions control who can confirm, receive, produce, adjust, settle, or change setup — reducing operational risk.",
     iconBg: "bg-blue-100",
     iconColor: "text-blue-600",
     border: "border-blue-100",
@@ -30,7 +30,7 @@ const cards = [
     icon: Footprints,
     title: "Complete Audit Trail",
     description:
-      "Track who created, approved, updated, received, settled, or changed every key record in the system.",
+      "Every important action stays linked to who did it, what changed, and when it happened.",
     iconBg: "bg-green-100",
     iconColor: "text-green-600",
     border: "border-green-100",
@@ -64,6 +64,7 @@ export default function Trust() {
               When stock, production, and commercial adjustments are tracked
               casually, teams stop trusting the numbers. Plan2Yield fixes that
               with ledger-backed movements, permissions, and audit history.
+              <span className="block mt-2 font-medium text-slate-700">This helps teams stop debating the numbers and start acting on them.</span>
             </p>
           </div>
         </FadeIn>
@@ -141,6 +142,9 @@ export default function Trust() {
                   </div>
                 ))}
               </div>
+              <p className="mt-6 text-center text-xs font-medium text-slate-500 italic">
+                A connected trail from operational action to financial follow-through
+              </p>
             </div>
           </FadeIn>
         </div>

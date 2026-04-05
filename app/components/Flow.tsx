@@ -19,7 +19,7 @@ const steps = [
 
 export default function Flow() {
   return (
-    <section id="solutions" className="py-24 lg:py-32 relative overflow-hidden">
+    <section id="solutions" className="py-16 lg:py-24 relative overflow-hidden">
       {/* Background orb */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-100/20 rounded-full blur-3xl -z-10" />
 
@@ -35,19 +35,20 @@ export default function Flow() {
           </div>
         </FadeIn>
 
-        {/* Desktop Timeline */}
-        <StaggerContainer
-          className="hidden lg:flex items-stretch justify-between relative"
-          staggerDelay={0.15}
-        >
-          {/* Connector Line */}
-          <div className="absolute top-[52px] left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-slate-200 via-[#5a32fa]/50 to-slate-200 z-0" />
+        {/* Timeline */}
+        <div className="overflow-x-auto pb-8 -mx-6 px-6 lg:overflow-visible lg:pb-0 lg:mx-0 lg:px-0 snap-x hide-scrollbar">
+          <StaggerContainer
+            className="flex items-stretch justify-between relative min-w-[800px] lg:min-w-0"
+            staggerDelay={0.15}
+          >
+            {/* Connector Line */}
+            <div className="absolute top-[52px] left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-slate-200 via-[#5a32fa]/50 to-slate-200 z-0" />
 
           {steps.map((step) => {
             const Icon = step.icon;
             const isActive = step.active;
             return (
-              <StaggerItem key={step.number} className="flex-1 relative z-10">
+              <StaggerItem key={step.number} className="flex-1 relative z-10 snap-center">
                 <div className="flex flex-col items-center text-center group cursor-default">
                   {/* Circle */}
                   <div
@@ -83,48 +84,6 @@ export default function Flow() {
               </StaggerItem>
             );
           })}
-        </StaggerContainer>
-
-        {/* Mobile Timeline */}
-        <div className="lg:hidden">
-          <StaggerContainer className="flex flex-col gap-4" staggerDelay={0.1}>
-            {steps.map((step) => {
-              const Icon = step.icon;
-              const isActive = step.active;
-              return (
-                <StaggerItem key={step.number}>
-                  <div
-                    className={`flex items-center gap-4 p-4 rounded-xl transition-all ${
-                      isActive
-                        ? "bg-[#5a32fa] text-white shadow-lg shadow-purple-600/20"
-                        : "bg-white border border-slate-200 shadow-sm"
-                    }`}
-                  >
-                    <div
-                      className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${
-                        isActive ? "bg-white/20" : "bg-slate-50"
-                      }`}
-                    >
-                      <Icon
-                        size={22}
-                        className={isActive ? "text-white" : "text-slate-500"}
-                      />
-                    </div>
-                    <div>
-                      <span className={`text-xs font-bold ${isActive ? "text-white/70" : "text-muted-light"}`}>
-                        STEP {step.number}
-                      </span>
-                      <h3 className={`text-sm font-bold ${isActive ? "text-white" : "text-foreground"} font-[family-name:var(--font-space-grotesk)]`}>
-                        {step.label}
-                      </h3>
-                      <p className={`text-xs ${isActive ? "text-white/70" : "text-muted-light"}`}>
-                        {step.description}
-                      </p>
-                    </div>
-                  </div>
-                </StaggerItem>
-              );
-            })}
           </StaggerContainer>
         </div>
       </div>

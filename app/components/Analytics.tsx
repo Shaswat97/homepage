@@ -12,24 +12,28 @@ const highlights = [
   {
     icon: ClipboardList,
     title: "Order Backlog & Delivery Completion",
+    helper: "See which orders are falling behind before dispatch issues become customer problems",
     iconBg: "bg-purple-100",
     iconColor: "text-[#5a32fa]",
   },
   {
     icon: Package,
     title: "Inventory Value & Low-Stock Alerts",
+    helper: "Know where stock value is sitting and which shortages need immediate action",
     iconBg: "bg-blue-100",
     iconColor: "text-blue-600",
   },
   {
     icon: Banknote,
     title: "Receivables, Payables & Collection Efficiency",
+    helper: "Spot cash pressure early and prioritize follow-up where it matters most",
     iconBg: "bg-green-100",
     iconColor: "text-green-600",
   },
   {
     icon: FileText,
     title: "Debit/Credit Note Ageing & Recovery Trends",
+    helper: "See which recoveries are pending too long and where leakage is building up",
     iconBg: "bg-amber-100",
     iconColor: "text-amber-600",
   },
@@ -39,13 +43,14 @@ const highlights = [
 function RevenueChart() {
   return (
     <div className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm h-full">
-      <div className="flex items-center justify-between mb-5">
+      <div className="flex items-start justify-between mb-2">
         <div>
           <p className="text-xs font-medium text-muted-light uppercase tracking-wider">Revenue Trend</p>
           <p className="text-lg font-bold text-foreground font-[family-name:var(--font-space-grotesk)]">₹1.42 Cr</p>
         </div>
         <span className="text-xs font-semibold text-green-600 bg-green-50 px-2.5 py-1 rounded-full">+8.3% QoQ</span>
       </div>
+      <p className="text-[11px] text-slate-500 mb-5 leading-snug">Track momentum shifts before they affect planning and collections</p>
       <svg viewBox="0 0 320 100" className="w-full h-24" fill="none">
         <defs>
           <linearGradient id="revFill" x1="0" y1="0" x2="0" y2="1">
@@ -86,12 +91,13 @@ function ProductionChart() {
 
   return (
     <div className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm h-full">
-      <div className="flex items-center justify-between mb-5">
+      <div className="flex items-start justify-between mb-2">
         <div>
           <p className="text-xs font-medium text-muted-light uppercase tracking-wider">Production Output</p>
           <p className="text-lg font-bold text-foreground font-[family-name:var(--font-space-grotesk)]">Good / Reject / Scrap</p>
         </div>
       </div>
+      <p className="text-[11px] text-slate-500 mb-5 leading-snug">See reject and scrap pressure early enough to intervene operationally</p>
       <div className="flex items-end justify-between gap-3 h-28">
         {months.map((m) => (
           <div key={m.label} className="flex-1 flex flex-col items-center gap-0.5">
@@ -127,10 +133,11 @@ function InventoryDonut() {
 
   return (
     <div className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm h-full">
-      <div className="mb-5">
+      <div className="mb-2">
         <p className="text-xs font-medium text-muted-light uppercase tracking-wider">Inventory Value Split</p>
         <p className="text-lg font-bold text-foreground font-[family-name:var(--font-space-grotesk)]">₹38.2L</p>
       </div>
+      <p className="text-[11px] text-slate-500 mb-5 leading-snug">Understand where working capital is locked across free, WIP, finished, and scrap stock</p>
       <div className="flex items-center gap-6">
         <div className="relative w-32 h-32 shrink-0">
           <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
@@ -176,13 +183,14 @@ function NoteAgeingChart() {
 
   return (
     <div className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm h-full">
-      <div className="flex items-center justify-between mb-5">
+      <div className="flex items-start justify-between mb-2">
         <div>
           <p className="text-xs font-medium text-muted-light uppercase tracking-wider">Note Ageing</p>
           <p className="text-lg font-bold text-foreground font-[family-name:var(--font-space-grotesk)]">₹27.2L outstanding</p>
         </div>
-        <span className="text-xs font-semibold text-red-500 bg-red-50 px-2.5 py-1 rounded-full">₹4.8L overdue</span>
+        <span className="text-xs font-semibold text-red-500 bg-red-50 px-2.5 py-1 rounded-full shrink-0">₹4.8L overdue</span>
       </div>
+      <p className="text-[11px] text-slate-500 mb-5 leading-snug break-words">Prioritize old open notes before they become write-offs or relationship issues</p>
       <div className="space-y-3">
         {buckets.map((b) => (
           <div key={b.label} className="flex items-center gap-3">
@@ -215,7 +223,7 @@ export default function Analytics() {
               See the factory through live numbers, not end-of-month surprises
             </h2>
             <p className="mt-5 text-lg text-muted leading-relaxed">
-              Plan2Yield gives management a command-center view across backlog, inventory, production, collections, payables, recoveries, and margin leakage.
+              Plan2Yield gives management a command-center view across backlog, inventory, production, collections, payables, recoveries, and margin leakage, so management knows exactly where to act first.
             </p>
           </div>
         </FadeIn>
@@ -227,11 +235,14 @@ export default function Analytics() {
             return (
               <StaggerItem key={h.title}>
                 <div className="bg-white rounded-xl p-5 border border-slate-100 shadow-sm card-hover group">
-                  <div className="flex items-center gap-3">
-                    <div className={`w-10 h-10 rounded-lg ${h.iconBg} flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300`}>
-                      <Icon size={18} className={h.iconColor} />
+                  <div className="flex items-start gap-4">
+                    <div className={`w-12 h-12 rounded-xl border border-slate-100 ${h.iconBg} flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-300`}>
+                      <Icon size={20} className={h.iconColor} />
                     </div>
-                    <p className="text-sm font-semibold text-foreground leading-snug">{h.title}</p>
+                    <div>
+                      <p className="text-sm font-bold text-foreground leading-snug mb-1 font-[family-name:var(--font-space-grotesk)]">{h.title}</p>
+                      <p className="text-[11px] text-muted-light leading-snug">{h.helper}</p>
+                    </div>
                   </div>
                 </div>
               </StaggerItem>
